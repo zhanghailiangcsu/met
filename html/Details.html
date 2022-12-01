@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Details &#8212; DIASim 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Usage" href="Usage.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="details">
+<h1>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h1>
+<section id="the-parameter-details-for-diasim">
+<h2>The parameter details for DIASim<a class="headerlink" href="#the-parameter-details-for-diasim" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><strong>Files.</strong> The input file(.xlsx) of DIASim that contains SMILES, retention times and intensitise.
+SMILES are the components that need to be simulated.
+The retention times can be set by yourself, or it can be predicted by algorithms such as GNN-RT.
+Intensities represents the component intensities that need to be simulated</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Npeaks.</strong> The number of peaks to include in the isotopic cluster, starting from the monoisotopic peak.
+If given a number below 1 or above the maximum number of isotopic variants, the maximum will be used.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Energy.</strong> Collision energies simulated in the DIA runs.
+CFMID can simulate the fragmentation of components at three collision energies, namely high energy, medium energy and low energy, and the corresponding collision energies are 10eV, 20eV and 40eV.
+When using DIASim, you need to manually select a suitable collision energy from three energies.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>NoiseIntensity.</strong> The noise intensity added during simulation can be set according to the intensity of the input file or the noise of the instrument.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>NoiseDensity.</strong> NoiseDensity stands for density factor. The higher the density factor, the more white noise there is in each spectrum.
+The noiseDensity is 1 represents that the number of noise peaks in the unit m/z is 1.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Rate.</strong> Rate represents the acquisition rate of the mass spectrometry instrument. In other words, rate is the time interval between mass spectrum acquisitions in seconds.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>IsolationWindowSize.</strong> Unlike data dependent acquisition(DDA) technology, DIA has wider isolation windows. IsolationWindowSize represents the isolation window size needs to be set during simulation</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>IsolationWindowNumber.</strong> DIA acquires MS/MS of precursor ions within multiple adjacent isolation windows independent of precursor ions intensities.
+Therefore, you need to set the number of windows during simulation.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Mz_start.</strong> Mz_start represents the the m/z at the start of the acquisition of the isolation window based on actual experiments.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>RT.</strong> RT is the retention time in seconds.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Mz_tol.</strong> Mz_tol represents m/z tolerance in simulated DIA runs. Since DIA uses a wide isolation window, the MS/MS is a complex mixture of spectra and there are commom fragment ions.
+Using m/z tolerance can define whether two peaks are sufficiently close to be overlapping or not. The intensities of the peaks to be merged are summed,
+and the new m/z value is calculated by a weighted average of the original m/z values weighted by the intensities of the respective peaks.and this parameter is adjustable by the user.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Save.</strong> Save represents the storage location of the output file(.mzML).</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">DIASim</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Description.html">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Details</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Usage.html" title="previous chapter">Usage</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Hailiang Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Details.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
