@@ -1,8 +1,0 @@
-Description
-=====
-The description of DIASim
----------------------------------
-  DIASim is a data independent acquisition(DIA)  simulation tool written in Python based on metabolomics. 
-  DIASim can simulate key informations in DIA runs, such as retention times, intensities, isotopic distributions, shapes of the elution profile, etc. 
-  DIASim uses a file(.xlsx) containing information such as SMILE, retention times and intensities as input. Then，some important parameters need to be set.  In the end, the output is a simulated file(.mzML).
-  DIASim uses CFMID to simulate molecular fragmentation, so the results at three different collision energies can be simulated. BRAIN is used to calculate isotopic patterns, and finally OpenMS is used to generate the output file. 
