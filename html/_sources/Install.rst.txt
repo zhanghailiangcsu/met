@@ -1,0 +1,15 @@
+Install
+======
+The details of install
+---------------------
+  DIASim enables simulation of metabolomic DIA data using libraries such as CFMID, Numpy, BRAIN and pyopenms. 
+  The DIASim installation package is provided to facilitate running DIASim.
+  If you want to use DIASim, you first need to install docker desktop locally.
+  Docker can be downloaded at https://docs.docker.com/desktop/windows/install/
+  After installing docker, you need to install the CFMID image in docker.
+  You need to open command tool Windows PowerShell, Then run the following command.::
+  
+    docker pull wishartlab/cfmid
+  Then you need to download the installation package of DIASim. 
+  DIASim can be downloaded at https://github.com/zhanghailiangcsu/DIASim.
+  After decompression, you can use DIASim to generate simulated DIA data.
