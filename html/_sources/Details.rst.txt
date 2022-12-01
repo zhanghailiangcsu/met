@@ -1,0 +1,38 @@
+Details
+======
+The parameter details for DIASim
+-----------------------------------------
+
+  | **Files.** The input file(.xlsx) of DIASim that contains SMILES, retention times and intensitise.
+    SMILES are the components that need to be simulated.
+    The retention times can be set by yourself, or it can be predicted by algorithms such as GNN-RT.
+    Intensities represents the component intensities that need to be simulated
+
+  | **Npeaks.** The number of peaks to include in the isotopic cluster, starting from the monoisotopic peak. 
+    If given a number below 1 or above the maximum number of isotopic variants, the maximum will be used. 
+
+  | **Energy.** Collision energies simulated in the DIA runs. 
+    CFMID can simulate the fragmentation of components at three collision energies, namely high energy, medium energy and low energy, and the corresponding collision energies are 10eV, 20eV and 40eV.
+    When using DIASim, you need to manually select a suitable collision energy from three energies. 
+
+  | **NoiseIntensity.** The noise intensity added during simulation can be set according to the intensity of the input file or the noise of the instrument. 
+
+  | **NoiseDensity.** NoiseDensity stands for density factor. The higher the density factor, the more white noise there is in each spectrum. 
+    The noiseDensity is 1 represents that the number of noise peaks in the unit m/z is 1.
+
+  | **Rate.** Rate represents the acquisition rate of the mass spectrometry instrument. In other words, rate is the time interval between mass spectrum acquisitions in seconds. 
+
+  | **IsolationWindowSize.** Unlike data dependent acquisition(DDA) technology, DIA has wider isolation windows. IsolationWindowSize represents the isolation window size needs to be set during simulation
+
+  | **IsolationWindowNumber.** DIA acquires MS/MS of precursor ions within multiple adjacent isolation windows independent of precursor ions intensities. 
+    Therefore, you need to set the number of windows during simulation. 
+
+  | **Mz_start.** Mz_start represents the the m/z at the start of the acquisition of the isolation window based on actual experiments. 
+
+  | **RT.** RT is the retention time in seconds.
+
+  | **Mz_tol.** Mz_tol represents m/z tolerance in simulated DIA runs. Since DIA uses a wide isolation window, the MS/MS is a complex mixture of spectra and there are commom fragment ions. 
+    Using m/z tolerance can define whether two peaks are sufficiently close to be overlapping or not. The intensities of the peaks to be merged are summed, 
+    and the new m/z value is calculated by a weighted average of the original m/z values weighted by the intensities of the respective peaks.and this parameter is adjustable by the user. 
+
+  | **Save.** Save represents the storage location of the output file(.mzML). 
